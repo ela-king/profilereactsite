@@ -1,1 +1,1 @@
-# profilereactsite
+# My Profile Demo Site (with React custom configuration)
