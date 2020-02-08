@@ -1,18 +1,39 @@
 * {
     font-family: "Lato";
+    color: #fff;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#root, .main-container {
+    height: 100%;
 }
 
 .links-container {
-    visibility: hidden;
-    margin: 20px 10% 0px;
-    min-height: 80px;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.2s 0s ease-in-out;
 }
-
+.links-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .links-container .link {
     text-decoration: none;
     font-weight: bold;
-    color: #888888;
+    color: #6c757d;
+    margin-bottom: 15px;
+    font-size: 22px;
     text-transform: uppercase;
     /* text-shadow: 0px 0px #000; */
 }
@@ -31,6 +52,8 @@
     outline: none !important;
     width: 45px;
     height: 40px;
+    text-align: center;
+    z-index: 1;
 }
 
 .menu-toggle-button span {
@@ -41,15 +64,24 @@
     transition: all 0.2s 0s ease-in-out;
 }
 
-.menu-toggle-button.active + .links-container{
+.menu-toggle-button span:nth-child(2) {
+    width: 80%;
+}
+
+.menu-toggle-button span:nth-child(1) {
+    width: 40%;
+}
+
+/* .menu-toggle-button.active + .links-container{
     visibility: visible;
     height: auto;
     transition: all 0.2s 0s ease-in-out;
-}
+} */
 
 .menu-toggle-button.active > span:nth-child(1) {
     border-color: #e91e63;
     transform: rotate(45deg);
+    width: 80%;
     transition: all 0.2s 0s ease-in-out;
 }
 
@@ -66,4 +98,55 @@
 
 .main-wrapper {
     /* margin-top: 80px; */
+    margin: auto;
+    background: #000;
+    height: 100%;
+}
+
+.profile-view {
+    height: 100%;    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.image-cont {
+    height: 200px;
+    width: 200px;
+    border: 5px dashed #ccc;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.profile-img {
+    height: 100%;
+    width: 100%;
+    border: 5px solid transparent;
+    border-radius: 100%;
+}
+
+.profile-cont {
+    height: 200px;
+    padding-left: 30px;
+    border-left: 2px solid #fff;
+}
+
+.profile-cont > span {
+    display: block;
+}
+
+.profile-name {
+    font-size: 2.8rem;
+}
+
+.profile-desig {
+    font-size: 1.2rem;
+    color: #e91e63;
+    font-weight: 800;
+}
+
+.profile-selfnote {
+    font-size: 12px;
 }
